@@ -16,8 +16,8 @@ head(iris)
 ```{r}
 ggplot(iris, aes(x = Petal.Length)) +
   geom_density (aes(fill = Species, alpha = 0.6)) + 
-  labs(x = "Petal Length (cm)", y = "Count", legend = "Iris Species") 
-ggsave("practice_plot.png")
+  labs(x = "Petal Length (cm)", y = "Count", legend = "Iris Species") -> p
+ggsave("practice_plot.png", p)
 
 
 ```{r pressure, echo=FALSE}
