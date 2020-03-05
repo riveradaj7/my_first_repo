@@ -1,0 +1,26 @@
+---
+title: "Practice plotting and github"
+author: "Jordan Rivera"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+head(iris)
+```
+
+
+
+```{r}
+ggplot(iris, aes(x = Petal.Length)) +
+  geom_density (aes(fill = Species, alpha = 0.6)) + 
+  labs(x = "Petal Length (cm)", y = "Count", legend = "Iris Species") 
+ggsave("practice_plot.png")
+
+
+```{r pressure, echo=FALSE}
+
+```
+
